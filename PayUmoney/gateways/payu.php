@@ -45,11 +45,11 @@ function payu_link($params) {
 	# System Variables
 	$companyname = 'payu';
 	$systemurl = $params['systemurl'];
-    $PostURL = "https://test.payu.in/_payment";
+    //$PostURL = "https://test.payu.in/_payment";
     if($gatewaymode == 'LIVE')
       $PostURL = "https://secure.payu.in/_payment";
       else
-      $PostURL = "https://test.payu.in/_payment";
+      $PostURL = "https://sandboxsecure.payu.in/_payment";
 	# Enter your code submit to the Payu gateway...
 
 	$code = '<form method="post" action='.$PostURL.' name="frmTransaction" id="frmTransaction" onSubmit="return validate()">
